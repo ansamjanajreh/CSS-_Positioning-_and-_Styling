@@ -52,6 +52,7 @@
 .navbar ul li:hover ul.dropdown {
   display: block;
   right: -10px;
+  z-index: 1000;
 }
 
 #about {
@@ -63,6 +64,7 @@
   font-size: 24px;
   padding: 50px;
   border-bottom: 2px solid #000033;
+  position: relative;
 }
 
 .my-img {
@@ -83,10 +85,41 @@
   text-align: left;
 }
 
+#skills {
+  text-align: center;
+  padding: 30px;
+  background-color: #7988a385;
+  margin-top: 120px;
+}
+
+#skills ul {
+  list-style: none;
+}
+
+#skills ul li {
+  display: inline-block;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 0 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+#skills ul li:hover {
+  background-color: #ffd700;
+  transform: translateY(-10px);
+}
+
+#skills ul li:active {
+  background-color: #c0a830;
+  transform: translateY(10px);
+}
+
 #projects {
   text-align: center;
   padding: 40px 20px;
-  margin-top: 60px;
 }
 
 h2 {
@@ -97,13 +130,6 @@ h2 {
   text-align: center;
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
 .project-card {
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -111,7 +137,15 @@ h2 {
   width: 300px;
   padding: 20px;
   text-align: left;
+  margin: 50px 20px;
   transition: transform 0.3s ease;
+}
+
+#yelpCamp {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 999;
 }
 
 .project-card:hover {
@@ -135,39 +169,6 @@ h2 {
   line-height: 1.5;
 }
 
-#skills {
-  text-align: center;
-  padding: 30px;
-  background-color: #7988a385;
-}
-
-#skills ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-#skills ul li {
-  padding: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  font-size: 18px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-}
-
-#skills ul li:hover {
-  background-color: #ffd700;
-  transform: scaleY(1.5);
-}
-
-#skills ul li:active {
-  background-color: #c0a830;
-  transform: scaleX(0.7);
-}
-
 #contact-me {
   max-width: 600px;
   margin: 0 auto;
@@ -177,17 +178,10 @@ h2 {
   box-shadow: 0 0 10px #0000001a;
 }
 
-#contact-me form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
 #contact-me form label {
   font-size: 16px;
   font-weight: bold;
   color: #333333;
-  margin-bottom: 5px;
 }
 
 #contact-me form input[type="text"],
@@ -198,6 +192,7 @@ h2 {
   border: 1px solid #cccccc;
   border-radius: 5px;
   font-size: 16px;
+  margin: 15px 0 20px;
   transition: border-color 0.3s ease;
 }
 
@@ -215,12 +210,13 @@ h2 {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #contact-me form input[type="submit"] {
   background-color: #000033;
   color: #ffffff;
+  margin-right: 30px;
 }
 
 #contact-me form input[type="submit"]:hover {
