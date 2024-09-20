@@ -126,6 +126,7 @@ header {
 #projects {
   text-align: center;
   padding: 40px 20px;
+  position: relative;
 }
 
 h2 {
@@ -148,8 +149,8 @@ h2 {
 
 #yelpCamp {
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: -480px;
+  left: 80px;
   z-index: 999;
 }
 
