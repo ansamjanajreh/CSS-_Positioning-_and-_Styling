@@ -2,6 +2,12 @@
   margin: 0px;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
 .navbar {
   position: relative;
   background-color: #000033;
@@ -70,7 +76,7 @@
 .my-img {
   position: absolute;
   left: 44%;
-  top: 40%;
+  top: 77%;
   border-radius: 50%;
   border: 2px solid #ffd700;
   z-index: 1000;
@@ -103,18 +109,18 @@
   border-radius: 5px;
   font-size: 18px;
   margin: 0 20px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
+  position: relative;
 }
 
 #skills ul li:hover {
   background-color: #ffd700;
-  transform: translateY(-10px);
+  top: -10px;
 }
 
 #skills ul li:active {
   background-color: #c0a830;
-  transform: translateY(10px);
+  top: 10px;
 }
 
 #projects {
@@ -138,7 +144,6 @@ h2 {
   padding: 20px;
   text-align: left;
   margin: 50px 20px;
-  transition: transform 0.3s ease;
 }
 
 #yelpCamp {
@@ -149,7 +154,6 @@ h2 {
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 8px 16px #d4af37;
 }
 
@@ -193,7 +197,6 @@ h2 {
   border-radius: 5px;
   font-size: 16px;
   margin: 15px 0 20px;
-  transition: border-color 0.3s ease;
 }
 
 #contact-me form input:focus,
@@ -209,7 +212,6 @@ h2 {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 5px;
 }
 
@@ -243,7 +245,6 @@ footer .social-links a {
   color: #333;
   font-size: 30px;
   margin: 0 8px;
-  transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
